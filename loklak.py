@@ -21,7 +21,7 @@ class Loklak(object):
     """
 
     baseUrl = 'http://api.loklak.org/'
-    baseUrlSusi = 'http://api.asksusi.com/'
+    baseUrlSusi = 'https://api.susi.ai/'
     name = None
     followers = None
     following = None
