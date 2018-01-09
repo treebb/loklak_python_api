@@ -20,7 +20,7 @@ class Loklak(object):
 
     """
 
-    baseUrl = 'http://loklak.org/'
+    baseUrl = 'http://api.loklak.org/'
     baseUrlSusi = 'http://api.asksusi.com/'
     name = None
     followers = None
@@ -37,17 +37,17 @@ class Loklak(object):
     action = None
     data = {}
 
-    def __init__(self, baseUrl='http://loklak.org/'):
+    def __init__(self, baseUrl='http://api.loklak.org/'):
         """Constructor of the Loklak class.
 
         Args:
-            baseUrl (str): Base URL for accessing the APIs (default=http://loklak.org).
+            baseUrl (str): Base URL for accessing the APIs (default=http://api.loklak.org/).
 
         """
         baseUrl = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', baseUrl)
         try:
             if baseUrl[0]:
-                if baseUrl[0] != 'http://loklak.org/':
+                if baseUrl[0] != 'http://api.loklak.org/':
                     url_test = self.hello()
                     if url_test['status'] == 'ok':
                         self.baseUrl = baseUrl[0]
